@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel_mobile_app/src/Views/DatePicker/date_picker.dart';
 import 'package:travel_mobile_app/src/Views/Destinations/home_destination.dart';
 import 'package:travel_mobile_app/src/Views/Hotels/hotels.dart';
+import 'package:travel_mobile_app/src/Views/Rooms/rooms.dart';
 
 class Routes {
   static Map<String, WidgetBuilder> getAppRoutes() {
@@ -9,6 +10,7 @@ class Routes {
       '/home_destination': (BuildContext context) => const HomeDestination(),
       '/datepicker': (BuildContext context) => const DatePicker(),
       '/hotels': (BuildContext context) => const Hotels(),
+      '/rooms': (BuildContext context) => const Rooms(),
     };
   }
 }
