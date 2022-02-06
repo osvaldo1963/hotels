@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travel_mobile_app/src/Components/Cards/listview_card_hotels.dart';
+import 'package:travel_mobile_app/src/Components/Header/hotels_header.dart';
 
 class Hotels extends StatefulWidget {
   const Hotels({Key? key}) : super(key: key);
@@ -16,63 +18,19 @@ class _Hotels extends State<Hotels> {
       ),
       body: Column(
         children: [
-          Expanded(
-              flex: 3,
-              child: Container(
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(
-                        "https://www.lewislandscape.com/wp-content/grand-media/image/GalleryImage1.jpg"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: Container(
-                  decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.center,
-                    colors: [
-                      Colors.black,
-                      Colors.transparent,
-                    ],
-                  )),
-                  child: Column(
-                    children: [
-                      Container(
-                        color: Colors.green,
-                      ),
-                      const Spacer(),
-                      const Text(
-                        "Thailand Islands",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      const Text("15 Jun - 18 Jun",
-                          style: TextStyle(color: Colors.white)),
-                      const Icon(
-                        Icons.arrow_drop_up,
-                        color: Colors.white,
-                      ),
-                      Container(
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20.0),
-                              topRight: Radius.circular(20.0),
-                            )),
-                        alignment: Alignment.center,
-                        height: 60,
-                        child: const Text("14 Hotels Available"),
-                      )
-                    ],
-                  ),
-                ),
-              )),
+          const Expanded(flex: 3, child: HotelsHeader()),
           Expanded(
               flex: 4,
               child: Container(
                 color: Colors.white,
                 child: ListView(
-                  children: [Text("dsdsdsdsd")],
+                  children: [
+                    ListViewCardHotels(),
+                    ListViewCardHotels(),
+                    ListViewCardHotels(),
+                    ListViewCardHotels(),
+                    ListViewCardHotels(),
+                  ],
                 ),
               )),
         ],

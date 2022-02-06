@@ -13,7 +13,7 @@ class DatePickerBody extends StatelessWidget {
           Column(
             children: [
               SizedBox(
-                height: 50,
+                height: 40,
                 child: FittedBox(
                   child: Text(data['start_date'].toString()),
                 ),
@@ -24,7 +24,7 @@ class DatePickerBody extends StatelessWidget {
           Column(
             children: [
               SizedBox(
-                height: 50,
+                height: 40,
                 child: FittedBox(
                   child: Text(data['end_date'].toString()),
                 ),
