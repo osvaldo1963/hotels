@@ -24,7 +24,12 @@ class _Rooms extends State<Rooms> {
             Header(text: "35 Hotels"),
             Expanded(
                 child: ListView(
-              children: [ListViewCardRooms()],
+              children: [
+                ListViewCardRooms(),
+                ListViewCardRooms(),
+                ListViewCardRooms(),
+                ListViewCardRooms()
+              ],
             ))
           ],
         ),

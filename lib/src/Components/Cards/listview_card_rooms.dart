@@ -5,12 +5,21 @@ class ListViewCardRooms extends StatelessWidget {
   Widget build(BuildContext context) => Container(
       padding: const EdgeInsets.all(15),
       child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(7),
+        ),
         child: Column(
           children: [
             Container(
-              child: Image.network(
-                "https://www.lewislandscape.com/wp-content/grand-media/image/GalleryImage1.jpg",
-                fit: BoxFit.cover,
+              height: 200,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(7), topRight: Radius.circular(7)),
+                image: DecorationImage(
+                  image: NetworkImage(
+                      "https://www.lewislandscape.com/wp-content/grand-media/image/GalleryImage1.jpg"),
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
             Container(
